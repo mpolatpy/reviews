@@ -28,9 +28,9 @@ describe('App component tests', () => {
   });
 
   test('navigates to review detail page when clicked on a card', () => {
-    const cards = screen.getAllByRole('button');
-    fireEvent.click(cards[0]);
+    const card = screen.getByText(/Burt Riddle/i);
+    fireEvent.click(card);
 
-    expect(history.location.pathname).toBe('/reviews/5d707203b65083001e956f0a');
+    expect(history.location.pathname).toBe('/reviews/5d7072035e3b9ab65839a7a7');
   })
 });
