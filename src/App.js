@@ -1,23 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import CssBaseline from '@mui/material/CssBaseline';
+import { Switch, Route } from 'react-router-dom';
+import ReviewList from './pages/ReviewList';
+import ReviewDetails from './pages/ReviewDetails';
+import Container from '@mui/material/Container';
+import Header from './components/Header';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CssBaseline />
+      <Header headerText='Reviews'/>
+      <Container maxWidth='xl'>
+        <Switch>
+          <Route exact path="/" component={ReviewList} />
+          <Route path="/reviews/:id" component={ReviewDetails} />
+        </Switch>
+      </Container>
     </div>
   );
 }

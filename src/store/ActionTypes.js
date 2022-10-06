@@ -1,0 +1,4 @@
+export const ReviewActionTypes = {
+    UPDATE_RESPONSE: 'UPDATE_RESPONSE',
+    DELETE_RESPONSE: 'DELETE_RESPONSE',
+}
