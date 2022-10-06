@@ -23,7 +23,6 @@ export function reviewReducer(state, action) {
             }
         }
         case ReviewActionTypes.DELETE_RESPONSE: {
-            console.log(action, state)
             return {
                 ...state,
                 reviews: {
